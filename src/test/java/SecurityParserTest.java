@@ -1,13 +1,17 @@
-import oleg.homework.security.SecurityParser;
+
+import oleg.homework.stock.StockParser;
+import org.junit.Assert;
 import org.junit.Test;
 import java.io.IOException;
 
+
 public class SecurityParserTest {
+
 
     @Test
     public void parseTest() throws IOException {
-        SecurityParser parser = new SecurityParser();
-        System.out.println(parser.parsePrice("msft"));
-        System.out.println(parser.parseName("msft"));
+        StockParser parser = new StockParser();
+        Assert.assertEquals("MSFT", parser.parseName("msft"));
     }
+
 }
